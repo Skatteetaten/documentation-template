@@ -27,3 +27,4 @@ yarn-error.log*
 *.tgz
 git-properties.json
 certs
+.scannerwork

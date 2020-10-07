@@ -9,7 +9,7 @@ def overrides = [
     versionStrategy: [
         [ branch: 'main', versionHint: '1']
     ],
-    sonarQube: false,
+    sonarQube: true,
     npmInstallCommand: "ci",
     nodeVersion: "10",
     github: [
