@@ -1,0 +1,83 @@
+{
+  "name": "documentation-template",
+  "groupId": "no.skatteetaten.aurora",
+  "version": "1.0.0",
+  "private": false,
+  "author": {
+    "name": "Skatteetaten"
+  },
+  "files": [
+    "build",
+    "metadata"
+  ],
+  "dependencies": {
+    "@skatteetaten/frontend-components": "3.6.0",
+    "axios": "0.20.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.2.0"
+  },
+  "devDependencies": {
+    "@skatteetaten/ci-scripts": "2.0.5",
+    "@testing-library/jest-dom": "5.11.4",
+    "@testing-library/react": "11.0.4",
+    "@types/jest": "26.0.14",
+    "@types/node": "14.10.3",
+    "@types/react": "16.9.49",
+    "@types/react-dom": "16.9.8",
+    "@types/react-router-dom": "5.1.5",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-sonarjs": "0.5.0",
+    "gh-pages": "3.1.0",
+    "jest-junit": "11.1.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.1.2",
+    "react-scripts": "3.4.3",
+    "rimraf": "3.0.2",
+    "sonarqube-scanner": "2.7.0",
+    "typescript": "4.0.2"
+  },
+  "scripts": {
+    "prestart": "npm run clean",
+    "start": "react-scripts start",
+    "prebuild": "npm-run-all clean lint",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "deploy": "gh-pages -d build",
+    "sonarqube": "sonar-scanner",
+    "clean": "rimraf build build-api coverage pom *.tgz git-properties.json",
+    "test": "react-scripts test --env=jsdom",
+    "test:once": "CI=true npm test",
+    "test:coverage": "CI=true npm run test -- --coverage --testResultsProcessor jest-junit",
+    "lint": "eslint 'src/**/*{.ts,.tsx}'",
+    "lint:fix": "eslint --fix 'src/**/*{.ts,.tsx}'",
+    "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/setupTests.js"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "Unit Tests",
+    "outputDirectory": "coverage/surefire-reports",
+    "outputName": "TEST-jest.xml",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "proxy": "http://localhost:9090",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 10",
+    "not op_mini all"
+  ],
+  "engines": {
+    "node": ">=10.13.0"
+  }
+}

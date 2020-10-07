@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:sonarjs/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "sonarjs"
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
