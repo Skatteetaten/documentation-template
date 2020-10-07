@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/documentation-template/static/css/main.d05f8053.chunk.css",
-    "main.js": "/documentation-template/static/js/main.f7bb5bc3.chunk.js",
+    "main.js": "/documentation-template/static/js/main.4a154b0f.chunk.js",
     "runtime-main.js": "/documentation-template/static/js/runtime-main.c7af3d10.js",
     "static/js/2.735a392f.chunk.js": "/documentation-template/static/js/2.735a392f.chunk.js",
     "index.html": "/documentation-template/index.html",
-    "precache-manifest.95034e9afa456d6ee39b5ee2561b36ca.js": "/documentation-template/precache-manifest.95034e9afa456d6ee39b5ee2561b36ca.js",
+    "precache-manifest.2d7735b36b967126fd1ac53d58d11a00.js": "/documentation-template/precache-manifest.2d7735b36b967126fd1ac53d58d11a00.js",
     "service-worker.js": "/documentation-template/service-worker.js",
     "static/js/2.735a392f.chunk.js.LICENSE.txt": "/documentation-template/static/js/2.735a392f.chunk.js.LICENSE.txt",
     "static/media/SkeIconfont.ttf": "/documentation-template/static/media/SkeIconfont.034e3456.ttf",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.c7af3d10.js",
     "static/js/2.735a392f.chunk.js",
     "static/css/main.d05f8053.chunk.css",
-    "static/js/main.f7bb5bc3.chunk.js"
+    "static/js/main.4a154b0f.chunk.js"
   ]
 }
