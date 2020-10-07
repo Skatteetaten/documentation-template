@@ -1,6 +1,7 @@
 {
   "name": "documentation-template",
   "groupId": "no.skatteetaten.aurora",
+  "homepage": "https://skatteetaten.github.io/documentation-template/",
   "version": "1.0.0",
   "private": false,
   "author": {
@@ -41,7 +42,7 @@
     "start": "react-scripts start",
     "prebuild": "npm-run-all clean lint",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -p 0 -r https://github.com/Skatteetaten/documentation-template.git",
     "sonarqube": "sonar-scanner",
     "clean": "rimraf build build-api coverage pom *.tgz git-properties.json",
     "test": "react-scripts test --env=jsdom",
