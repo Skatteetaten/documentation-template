@@ -8,4 +8,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Setup
 
-1. TODO
+### Required changes
+
+1. Change `name` and `groupId` from `package.json`.
+2. Change `projectKey` and `projectName` from `sonar-project.properties`
+3. Remove package-lock.json and run `npm install`
