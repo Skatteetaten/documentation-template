@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Setup
 
-### Required changes to code when using template:
+### Required changes to code when using this template:
 
 1. Change `name`, `groupId` and `homepage` from `package.json`.
 2. Change `deploy` script in package.json to point to your repository 
