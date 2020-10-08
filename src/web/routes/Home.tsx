@@ -17,7 +17,7 @@ export const Home: FC<HomeProps> = ({ location }) => {
 
   const serverLink =
     location?.pathname === '/' ? (
-      <SkeLink key="server" to="/monkey">
+      <SkeLink key="server" to="/message">
         Show server message
       </SkeLink>
     ) : (
@@ -30,7 +30,7 @@ export const Home: FC<HomeProps> = ({ location }) => {
     <div>
       <div className="center">{serverLink}</div>
       <Switch>
-        <Route path="/monkey">
+        <Route path="/message">
           <Card role="server-message">{serverMessage}</Card>
         </Route>
       </Switch>

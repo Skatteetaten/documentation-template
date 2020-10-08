@@ -10,7 +10,7 @@ describe('Home', () => {
     let renderResult: RenderResult | undefined;
     await act(async () => {
       renderResult = render(
-        <MemoryRouter initialEntries={['/monkey']}>
+        <MemoryRouter initialEntries={['/message']}>
           <Home />
         </MemoryRouter>
       );
