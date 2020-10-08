@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/documentation-template/static/css/main.d05f8053.chunk.css",
-    "main.js": "/documentation-template/static/js/main.5498a812.chunk.js",
+    "main.js": "/documentation-template/static/js/main.b60e4c5a.chunk.js",
     "runtime-main.js": "/documentation-template/static/js/runtime-main.c7af3d10.js",
-    "static/js/2.6429da10.chunk.js": "/documentation-template/static/js/2.6429da10.chunk.js",
+    "static/js/2.735a392f.chunk.js": "/documentation-template/static/js/2.735a392f.chunk.js",
     "index.html": "/documentation-template/index.html",
-    "precache-manifest.29e65333b041d93d1bdcabb1f8740584.js": "/documentation-template/precache-manifest.29e65333b041d93d1bdcabb1f8740584.js",
+    "precache-manifest.27d866e44cf41353ee3c73d05b56b149.js": "/documentation-template/precache-manifest.27d866e44cf41353ee3c73d05b56b149.js",
     "service-worker.js": "/documentation-template/service-worker.js",
-    "static/js/2.6429da10.chunk.js.LICENSE.txt": "/documentation-template/static/js/2.6429da10.chunk.js.LICENSE.txt",
+    "static/js/2.735a392f.chunk.js.LICENSE.txt": "/documentation-template/static/js/2.735a392f.chunk.js.LICENSE.txt",
     "static/media/SkeIconfont.ttf": "/documentation-template/static/media/SkeIconfont.034e3456.ttf",
     "static/media/SkeIconfont.eot": "/documentation-template/static/media/SkeIconfont.cf790643.eot",
     "static/media/SkeIconfont.woff2": "/documentation-template/static/media/SkeIconfont.e99cb538.woff2",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c7af3d10.js",
-    "static/js/2.6429da10.chunk.js",
+    "static/js/2.735a392f.chunk.js",
     "static/css/main.d05f8053.chunk.css",
-    "static/js/main.5498a812.chunk.js"
+    "static/js/main.b60e4c5a.chunk.js"
   ]
 }
