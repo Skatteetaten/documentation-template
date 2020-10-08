@@ -1,1 +1,1 @@
-Sitemap: https://skatteetaten.github.io/documentation-template/sitemap.txt
+Sitemap: https://skatteetaten.github.io/sitemap.txt
