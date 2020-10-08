@@ -23,4 +23,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Publish pages to skatteetaten.github.io/\<your repository>
 
 1. Commit and push changes
-2. Run command `npm run build` followed by `npm run deploy` to publish
+2. Make sure that a branch called `gh-pages` exists in your project
+3. Run command `npm run build` followed by `npm run deploy` to publish
