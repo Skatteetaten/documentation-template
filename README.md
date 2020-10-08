@@ -11,11 +11,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Required changes to code when using this template:
 
-1. Change `name`, `groupId` and `homepage` from `package.json`.
+1. Change `name`, `groupId` and `homepage` in `package.json`.
 2. Change `deploy` script in package.json to point to your repository 
-3. Change `projectKey` and `projectName` from `sonar-project.properties`
-4. Change `io.k8s.description` and `io.openshift.tags` from `openshift.json`
-5. Change `BrowserRouter basename` and `Layout title` from `App.tsx`
+3. Change `projectKey` and `projectName` in `sonar-project.properties`
+4. Change `io.k8s.description` and `io.openshift.tags` in `openshift.json`
+5. Change `BrowserRouter basename` and `Layout title` in `App.tsx`
+6. Change `title` in `public/index.html`
 4. Remove package-lock.json and run `npm install`
 
 ## Publish 
