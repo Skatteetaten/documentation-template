@@ -19,7 +19,8 @@ The documentation will be available at http://localhost:8000/documentation
 
 ## Publishing the github pages
 
-**Make sure you have a branch called gh-pages in your project, this branch will publish the github pages**
+- **Make sure you have a branch called gh-pages in your project, this branch will publish the GitHub pages**
+- **Go to https://github.com/Skatteetaten/<repository>/settings and select gh-pages as source for GitHub pages and click save**
 
 To build the documentation pages with gatsby
 
