@@ -28,7 +28,7 @@ const DocumentationPage = ({
     <SkeBasis>
       <Grid>
         <SingleColumnRow>
-          <h1>Dokumentasjon</h1>
+          <h1>Documentation</h1>
         </SingleColumnRow>
         <SingleColumnRow>
           <NavigationTile
