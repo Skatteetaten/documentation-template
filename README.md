@@ -19,6 +19,8 @@ The documentation will be available at http://localhost:8000/documentation
 
 ## Publishing the github pages
 
+**Make sure you have a branch called gh-pages in your project, this branch will publish the github pages**
+
 To build the documentation pages with gatsby
 
     npm run build
