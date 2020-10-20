@@ -1,4 +1,4 @@
-# Skattemelding
+# Documentation-template
 
 ## How to build manually
 
