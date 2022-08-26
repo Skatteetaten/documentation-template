@@ -16,12 +16,12 @@ body {
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .gatsby-highlight pre {
-    max-width: min(992px, 80vw);
-    overflow-x: auto;
+  max-width: min(992px, 80vw);
+  overflow-x: auto;
 }
 
 a {

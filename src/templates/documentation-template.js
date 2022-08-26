@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@skatteetaten/frontend-components/Grid";
 import { graphql } from "gatsby";
-import { renderAst } from '../components/renderAst';
+import { renderAst } from "../components/renderAst";
 
 import TableOfContents from "starter/components/TableOfContents";
 
@@ -30,11 +30,14 @@ export default function Template({ data }) {
         <Grid.Col {...mainGrid}>
           <h1>{frontmatter.title}</h1>
           {headings && (
-            <TableOfContents headings={headings} slug={fields.slug} minHeaders={1} />
+            <TableOfContents
+              headings={headings}
+              slug={fields.slug}
+              minHeaders={1}
+            />
           )}
-          <div
-            className={styles.documentationContainer}>
-            { renderAst(htmlAst) }
+          <div className={styles.documentationContainer}>
+            {renderAst(htmlAst)}
           </div>
         </Grid.Col>
       </Grid.Row>
