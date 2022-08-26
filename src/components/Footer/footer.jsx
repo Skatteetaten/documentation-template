@@ -2,7 +2,7 @@ import React from "react";
 import FooterContent from "@skatteetaten/frontend-components/FooterContent";
 import Grid from "@skatteetaten/frontend-components/Grid";
 
-import styles from "./footer.module.css";
+import * as styles from "./footer.module.css";
 
 const FooterLink = ({ to, name, image }) => (
   <a

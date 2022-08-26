@@ -5,7 +5,7 @@ import { renderAst } from "../components/renderAst";
 
 import TableOfContents from "starter/components/TableOfContents";
 
-import styles from "./documentation-template.module.css";
+import * as styles from "./documentation-template.module.css";
 
 const mainGrid = {
   sm: 10,

@@ -5,7 +5,7 @@ import Logo from "@skatteetaten/frontend-components/TopBanner/assets/logoSKEen.s
 import Image from "@skatteetaten/frontend-components/Image";
 import Icon from "@skatteetaten/frontend-components/Icon";
 
-import styles from "./header.module.css";
+import * as styles from "./header.module.css";
 
 const cx = classnames.bind(styles);
 
