@@ -9,17 +9,19 @@ import styles from "./header.module.css";
 
 const cx = classnames.bind(styles);
 
-const isActive = (href) => ({ isCurrent, isPartiallyCurrent }) => {
-  const activeStyle = {
-    className: styles.mainHeaderMenuActive,
+const isActive =
+  (href) =>
+  ({ isCurrent, isPartiallyCurrent }) => {
+    const activeStyle = {
+      className: styles.mainHeaderMenuActive,
+    };
+
+    if (href === "/" && isCurrent) {
+      return activeStyle;
+    }
+
+    return href !== "/" && isPartiallyCurrent ? activeStyle : null;
   };
-
-  if (href === "/" && isCurrent) {
-    return activeStyle;
-  }
-
-  return href !== "/" && isPartiallyCurrent ? activeStyle : null;
-};
 
 const HeaderMenu = ({ menu = [], showMobileMenu }) => (
   <nav
