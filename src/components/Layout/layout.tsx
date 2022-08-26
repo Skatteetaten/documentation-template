@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { FC, useState } from "react";
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
@@ -10,13 +9,11 @@ import favicon from "../../../favicon.png";
 import "prismjs/themes/prism.css";
 import "./layout.css";
 
-const Layout = ({ children }) => {
+const Layout: FC = ({ children }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const toggleMobileMenu = () => {
-    setShowMobileMenu((state) => ({
-      showMobileMenu: !state.showMobileMenu,
-    }));
+    setShowMobileMenu((current) => !current);
   };
 
   return (

@@ -4,11 +4,11 @@ import Grid from "@skatteetaten/frontend-components/Grid";
 
 import * as styles from "./footer.module.css";
 
-const FooterLink = ({ to, name, image }) => (
+const FooterLink = ({ to, name }: any) => (
   <a
     href={to}
     target="blank"
-    className={styles.footerLink}
+    className={styles.footerLinks}
     style={{ margin: "10px 0" }}
   >
     {name}

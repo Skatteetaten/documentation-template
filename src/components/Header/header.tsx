@@ -10,8 +10,8 @@ import * as styles from "./header.module.css";
 const cx = classnames.bind(styles);
 
 const isActive =
-  (href) =>
-  ({ isCurrent, isPartiallyCurrent }) => {
+  (href: string) =>
+  ({ isCurrent, isPartiallyCurrent }: any): any => {
     const activeStyle = {
       className: styles.mainHeaderMenuActive,
     };
@@ -23,7 +23,7 @@ const isActive =
     return href !== "/" && isPartiallyCurrent ? activeStyle : null;
   };
 
-const HeaderMenu = ({ menu = [], showMobileMenu }) => (
+const HeaderMenu = ({ menu = [], showMobileMenu }: any) => (
   <nav
     className={cx({
       mainHeaderNav: true,
@@ -31,7 +31,7 @@ const HeaderMenu = ({ menu = [], showMobileMenu }) => (
     })}
   >
     <ul className={styles.mainHeaderMenu}>
-      {menu.map((item, index) => (
+      {menu.map((item: any, index: number) => (
         <li key={`${item.href}-${index}`}>
           <Link
             to={item.href}
@@ -46,7 +46,7 @@ const HeaderMenu = ({ menu = [], showMobileMenu }) => (
   </nav>
 );
 
-const Header = ({ title, menu, onToggleMenu, showMobileMenu, ...rest }) => (
+const Header = ({ title, menu, onToggleMenu, showMobileMenu, ...rest }: any) => (
   <div>
     <div {...rest} className={styles.mainHeader}>
       <div className={styles.mainHeaderContent}>
