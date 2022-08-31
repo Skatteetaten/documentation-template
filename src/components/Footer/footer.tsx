@@ -8,7 +8,7 @@ const FooterLink = ({ to, name }: any) => (
   <a
     href={to}
     target="blank"
-    className={styles.footerLinks}
+    className={styles.footerLink}
     style={{ margin: "10px 0" }}
   >
     {name}
