@@ -6,6 +6,7 @@ def overrides = [
     pipelineScript: 'https://git.aurora.skead.no/scm/ao/aurora-pipeline-scripts.git',
     npmInstallCommand: "ci",
     nodeVersion: "16",
+    iq: false,
     disableAllReports: true,
     versionStrategy: [
       [ branch: 'master', versionHint: '0']
