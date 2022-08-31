@@ -17,7 +17,7 @@
     "build:local": "gatsby build",
     "deploy": "gh-pages -d public -p 0",
     "prettier:fix": "prettier --write '{src,docs}/**/*.{js,jsx,css,md}'",
-    "test": "echo \"no test specified\"",
+    "test:coverage": "echo \"no test specified\"",
     "clean": "gatsby clean"
   },
   "dependencies": {
