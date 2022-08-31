@@ -5,6 +5,7 @@
   "description": "Aurora documentation-template",
   "license": "Apache-2.0",
   "files": [
+    "metadata",
     "public"
   ],
   "scripts": {
