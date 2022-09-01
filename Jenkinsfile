@@ -14,10 +14,7 @@ def overrides = [
     github: [
       enabled: env.BRANCH_NAME == "master",
       deployToGHPagesCmd: "npm run deploy"
-    ],
-    callbackSuccess: {
-      build '/Aurora Opplæring/openshift-referanse-react/master'
-    }
+    ]
 ]
 
 fileLoader.withGit(overrides.pipelineScript, overrides.scriptVersion) {
