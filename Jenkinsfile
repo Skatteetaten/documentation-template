@@ -15,7 +15,7 @@ def overrides = [
       enabled: env.BRANCH_NAME == "master",
       deployToGHPagesCmd: "npm run deploy"
     ],
-    onCallbackSuccess: {
+    callbackSuccess: {
       build '/Aurora Opplæring/openshift-referanse-react/master'
     }
 ]
