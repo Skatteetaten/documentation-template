@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 import classnames from "classnames/bind";
 import Logo from "@skatteetaten/frontend-components/TopBanner/assets/logoSKEen.svg";
 import Image from "@skatteetaten/frontend-components/Image";
@@ -46,24 +46,47 @@ const HeaderMenu = ({ menu = [], showMobileMenu }: any) => (
   </nav>
 );
 
-const Header = ({ title, menu, onToggleMenu, showMobileMenu, ...rest }: any) => (
-  <div>
-    <div {...rest} className={styles.mainHeader}>
-      <div className={styles.mainHeaderContent}>
-        <div className={styles.mainHeaderWrapper}>
-          <div>
-            <Image src={Logo} className={styles.mainHeaderLogo} />
-          </div>
-          <div className={styles.mainHeaderButton}>
-            <button onClick={onToggleMenu}>
-              <Icon iconName="Menu" />
-            </button>
+const Header = ({ menu, onToggleMenu, showMobileMenu, ...rest }: any) => (
+  <StaticQuery
+    query={graphql`
+      query SiteHeaderQuery {
+        site {
+          siteMetadata {
+            menu {
+              href
+              name
+            }
+          }
+        }
+      }
+    `}
+    render={({ site }) => (
+      <>
+        <div>
+          <div {...rest} className={styles.mainHeader}>
+            <div className={styles.mainHeaderContent}>
+              <div className={styles.mainHeaderWrapper}>
+                <div>
+                  <Image src={Logo} className={styles.mainHeaderLogo} />
+                </div>
+                <div className={styles.mainHeaderButton}>
+                  <button onClick={onToggleMenu}>
+                    <Icon iconName="Menu" />
+                  </button>
+                </div>
+              </div>
+              {site.siteMetadata.menu && (
+                <HeaderMenu
+                  menu={site.siteMetadata.menu}
+                  showMobileMenu={showMobileMenu}
+                />
+              )}
+            </div>
           </div>
         </div>
-        {menu && <HeaderMenu menu={menu} showMobileMenu={showMobileMenu} />}
-      </div>
-    </div>
-  </div>
+      </>
+    )}
+  />
 );
 
 export default Header;

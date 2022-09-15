@@ -1,9 +1,9 @@
 import React from "react";
 import Grid from "@skatteetaten/frontend-components/Grid";
 import NavigationTile from "@skatteetaten/frontend-components/NavigationTile";
-import SkeBasis from "@skatteetaten/frontend-components/SkeBasis";
 import { SingleColumnRow } from "../components/Columns";
 import { graphql, Link } from "gatsby";
+import NavigationContent from "@skatteetaten/frontend-components/NavigationTile/NavigationContent";
 
 const DocumentationPage = ({
   data: {
@@ -25,19 +25,26 @@ const DocumentationPage = ({
     }));
 
   return (
-    <SkeBasis>
-      <Grid>
-        <SingleColumnRow>
-          <h1>Documentation</h1>
-        </SingleColumnRow>
-        <SingleColumnRow>
-          <NavigationTile
-            contents={contents}
-            renderContent={(to, content) => <Link to={to}>{content}</Link>}
-          />
-        </SingleColumnRow>
-      </Grid>
-    </SkeBasis>
+    <Grid>
+      <SingleColumnRow>
+        <h1>Documentation</h1>
+      </SingleColumnRow>
+      <SingleColumnRow>
+        <NavigationTile>
+          {contents.map((it) => (
+            <NavigationContent
+              key={it.to}
+              heading={it.heading}
+              icon={it.icon}
+              to={it.to}
+              renderContent={(to, content) => <Link to={to}>{content}</Link>}
+            >
+              {it.content}
+            </NavigationContent>
+          ))}
+        </NavigationTile>
+      </SingleColumnRow>
+    </Grid>
   );
 };
 
@@ -47,6 +54,9 @@ export const pageQuery = graphql`
   query DocumentationQuery {
     site {
       pathPrefix
+      siteMetadata {
+        title
+      }
     }
     allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___title] }) {
       edges {
@@ -64,3 +74,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head = ({ data }) => <title>{data.site.siteMetadata.title}</title>;

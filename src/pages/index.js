@@ -3,6 +3,7 @@ import Grid from "@skatteetaten/frontend-components/Grid";
 import { SingleColumnRow } from "../components/Columns";
 import { graphql } from "gatsby";
 import { renderAst } from "../components/renderAst";
+import "./index.css";
 
 const IndexPage = ({
   data: {
@@ -14,11 +15,9 @@ const IndexPage = ({
   ));
 
   return (
-    <div>
-      <Grid>
-        <SingleColumnRow>{content}</SingleColumnRow>
-      </Grid>
-    </div>
+    <Grid>
+      <SingleColumnRow>{content}</SingleColumnRow>
+    </Grid>
   );
 };
 
@@ -26,6 +25,11 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(filter: { fields: { slug: { eq: "/frontpage/" } } }) {
       edges {
         node {
@@ -39,3 +43,7 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head = ({ data }) => {
+  return <title>{data.site.siteMetadata.title}</title>;
+};
