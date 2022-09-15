@@ -4,10 +4,11 @@ def jenkinsfile
 def overrides = [
     scriptVersion  : 'v7',
     pipelineScript: 'https://git.aurora.skead.no/scm/ao/aurora-pipeline-scripts.git',
+    iqOrganizationName: "Team AOS",
+    iqBreakOnUnstable: false,
+    iqEmbedded: true,
     npmInstallCommand: "ci",
     nodeVersion: "16",
-    iq: false,
-    disableAllReports: true,
     versionStrategy: [
       [ branch: 'master', versionHint: '0']
     ],
