@@ -5,3 +5,9 @@
 ## Why ?
 
 - To share API and documentatoion with external users and partners
+
+## Code Example
+
+```ts
+const hello = "world";
+```

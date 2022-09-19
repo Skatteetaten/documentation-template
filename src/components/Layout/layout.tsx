@@ -5,6 +5,7 @@ import Footer from "../Footer";
 
 import "prismjs/themes/prism.css";
 import "./layout.css";
+import "./fill-remaining-height.css";
 
 const Layout: FC = ({ children }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
