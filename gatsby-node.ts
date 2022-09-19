@@ -1,4 +1,4 @@
-import path from 'path';
+import path from "path";
 import { createFilePath } from "gatsby-source-filesystem";
 import _ from "lodash";
 
@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }: any) => {
 
           createPage({
             path: `${edge.node.fields.slug}`, // required
-            component: documentationTemplate, // TODO: add slash
+            component: documentationTemplate,
             context: {
               slug: edge.node.fields.slug,
             },
