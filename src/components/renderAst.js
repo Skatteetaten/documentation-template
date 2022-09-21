@@ -1,8 +1,8 @@
-import React from 'react';
-import RehypeReact from 'rehype-react';
+import React from "react";
+import RehypeReact from "rehype-react";
 
 const renderer = new RehypeReact({
-  createElement: React.createElement
+  createElement: React.createElement,
 }).Compiler;
 
-export const renderAst = htmlAst => renderer(htmlAst);
+export const renderAst = (htmlAst) => renderer(htmlAst);
