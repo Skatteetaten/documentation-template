@@ -8,17 +8,15 @@ import NavigationContent from "@skatteetaten/frontend-components/NavigationTile/
 const DocumentationPage = ({
   data: {
     allMarkdownRemark: { edges },
-    site: { pathPrefix },
   },
 }) => {
-  const prefix = process.env.NODE_ENV !== "production" ? "" : pathPrefix;
   const contents = edges
     .filter(
       ({ node }) =>
         node.fields && node.fields.slug.search("/documentation/") >= 0
     )
     .map(({ node }) => ({
-      to: `${prefix}${node.fields.slug}`,
+      to: `${node.fields.slug}`,
       icon: node.frontmatter.icon,
       heading: node.frontmatter.title,
       description: node.frontmatter.description || "",
@@ -53,7 +51,6 @@ export default DocumentationPage;
 export const pageQuery = graphql`
   query DocumentationQuery {
     site {
-      pathPrefix
       siteMetadata {
         title
       }
