@@ -10,6 +10,7 @@ def overrides = [
     lineCoverageReport: false,
     npmInstallCommand: "ci",
     nodeVersion: "16",
+    credentialsId: "github",
     versionStrategy: [
       [ branch: 'master', versionHint: '0']
     ],
