@@ -1,5 +1,7 @@
 # Documentation-template
 
+DEPRECATED: Replaced by https://github.com/Skatteetaten/documentation-docusaurus-template
+
 ## How to build manually
 
 The project is built using npm from the current Node LTS. Install with [nvm](https://github.com/nvm-sh/nvm);
@@ -25,11 +27,10 @@ The documentation will be available at http://localhost:8000/documentation
 To build the documentation pages with gatsby
 
     npm run build
-    
+
 Then use the following command to publish to GitHub pages
 
     npm run deploy
-    
 
 ## Adding a \/documentation page
 
